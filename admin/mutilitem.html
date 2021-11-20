@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin UIkit</title>
+    <!-- Fontanwesome -->
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Css chung -->
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header uk-width-5-6 uk-margin-auto-left">
+        <div class="uk-flex">
+            <div class="header_nav uk-width-expand">
+                <nav class="uk-navbar" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li><a class="header__link" href="index.html">List</a></li>
+                            <li><a class="header__link" href="add.html">Add</a></li>
+                            <li><a class="header__link" href="edit.html">Edit</a></li>
+                            <li><a class="header__link" href="detail.html">Detail</a></li>
+                            <li><a class="header__link" href="mutilitem.html">Muntil Item</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a class="header__link" href="#">VN<span uk-icon ="triangle-down"></span></a>
+                                <div class="uk-navbar-dropdown uk-margin-remove uk-padding-small uk-width-auto">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li>
+                                            <a href="#">
+                                                <img width="30" uk-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbfgzvrxn66emdQOD-iKhNHoQCWWJFmUGE3vGxrmQXHaAJ-Sad4gSuAfMh4RZIOLqLNnM&usqp=CAU" alt="logo"> Tiếng Việt</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img uk-img width="30" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSv7cNW5WuVCeB7AqGuSnh4nckBqhN_1cRMsThbyFHSICtsyXg7Ds3E9YR2xQPGNm-KuQ&usqp=CAU" alt="Logo"> Tiếng Anh</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">
+                                    <img class="uk-border-circle" src="https://lh3.googleusercontent.com/ogw/ADea4I5HScjOTgEscCP3pDkiQweRUR7iSKk30eGIHPoo=s32-c-mo" alt="">
+                                    <span uk-icon="triangle-down"></span></a>
+                                <div class="uk-navbar-dropdown uk-margin-remove uk-padding-small">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li>
+                                            <a href="#"><i class="fas fa-user-tie"></i>Tài khoản</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-list"></i>Hoạt động</a></li>
+                                        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <!-- Menu dọc -->
+    <div class="menu uk-width-1-6">
+        <nav class="uk-nav uk-nav-default uk-padding-small uk-padding-remove-vertical">
+            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav="multiple: true">
+                <li>
+                    <div class="menu__logo">
+                        <img src="./assets/img/logo.jpg" alt="logo" uk-img>
+                    </div>
+                </li>
+                <hr class="uk-nav-divider">
+                <li><a href="#">Phần Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Main -->
+
+    <section class="main uk-width-5-6 uk-margin-auto-left uk-padding-small">
+        <!-- Main Content -->
+        <div class="main__content">
+            <div class="uk-overflow-auto uk-margin uk-card uk-card-default uk-border-rounded uk-padding-small">
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small uk-border-bottom uk-margin">
+                    <h4 class="uk-h3 uk-text-bold uk-text-capitalize uk-margin-remove">Multi Item</h4>
+                    <div>
+                        <button class="uk-button uk-button-green uk-border-rounded">Cập nhật</button>
+                        <button class="uk-button uk-button-danger uk-border-rounded">Hủy</button>
+                    </div>
+                </div>
+                <div id="users">
+                    <table class="uk-table uk-table-hover uk-table-middle uk-margin-remove">
+                        <thead>
+                            <tr>
+                                <th class="uk-text-bold">ID</th>
+                                <th>Name</th>
+                                <th>Born</th>
+                                <th>Device</th>
+                                <th>Join At</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                        </tbody>
+                    </table>
+                </div>
+                <button id="addUser" class="uk-button uk-button-green uk-border-rounded uk-margin-top">Thêm</button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Muntil Item  -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+$blue: #4e73df;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #e74a3b;
+$orange: #fd7e14;
+$yellow: #f6c23e;
+$green: #1cc88a;
+$teal: #20c9a6;
+$cyan: #36b9cc;
+$white: #fff;
+$gray: #858796;
+$gray-dark: #5a5c69;
+$primary: #4e73df;
+$secondary: #858796;
+$success: #1cc88a;
+$info: #36b9cc;
+$warning: #f6c23e;
+$danger: #e74a3b;
+$light: #f8f9fc;
+$dark: #5a5c69;
+$black:#000;
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+.uk-bg-primary {
+    background-color: $indigo;
+    color: $white;
+}
+
+.uk-table th {
+    font-weight: 700;
+    color: #000;
+}
+
+.uk-color-white {
+    color: $white;
+}
+
+.uk-padding-x {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.uk-border {
+    border: 1px solid #e5e5e5;
+    th {
+        font-weight: 600 !important;
+    }
+}
+
+.uk-border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.uk-border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.uk-button {
+    &:hover {
+        opacity: 0.8;
+        color: $white;
+        transition: all 0.3s;
+    }
+}
+
+.uk-button-warning {
+    background-color: $warning;
+    color: $white;
+}
+
+.uk-button-green {
+    background-color: $green;
+    color: $white;
+}
+
+.uk-button-info {
+    background-color: $info;
+    color: $white;
+}
+
+.uk-button-dark {
+    background-color: $dark;
+    color: $white;
+}
+
+.uk-button-icon {
+    width: 10px;
+}
+
+.header {
+    background-color: $info;
+    // box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 200px;
+    height: 80px;
+    z-index: 99;
+    &__link {
+        font-size: 1rem !important;
+        color: $white !important;
+        font-weight: 500 !important;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #3a2f2f;
+    background-color: $teal;
+    a {
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        display: block;
+        color: $white !important;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        height: 75px;
+    }
+}
+
+.no-footer {
+    border: none !important;
+}
+
+.uk-nav-parent-icon>.uk-parent>a::after {
+    background-color: $white !important;
+}
+
+.main {
+    margin-top: 80px;
+    background-color: $dark;
+}
+
+// Login
+.login {
+    width: 500px;
+    margin-top: 100px;
+    background-color: #36b9cc;
+}
+
+.bg-black {
+    background-color: #ccc;
+    height: 100vh;
+}

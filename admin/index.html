@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin UIkit</title>
+    <!-- Fontanwesome -->
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Css chung -->
+    <!-- DatatableJS-->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.uikit.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header uk-width-5-6 uk-margin-auto-left">
+        <div class="uk-flex">
+            <div class="header_nav uk-width-expand">
+                <nav class="uk-navbar" uk-navbar>
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li><a class="header__link" href="index.html">List</a></li>
+                            <li><a class="header__link" href="add.html">Add</a></li>
+                            <li><a class="header__link" href="edit.html">Edit</a></li>
+                            <li><a class="header__link" href="detail.html">Detail</a></li>
+                            <li><a class="header__link" href="mutilitem.html">Muntil Item</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a class="header__link" href="#">VN<span uk-icon ="triangle-down"></span></a>
+                                <div class="uk-navbar-dropdown uk-margin-remove uk-padding-small uk-width-auto">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li>
+                                            <a href="#">
+                                                <img width="30" uk-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbfgzvrxn66emdQOD-iKhNHoQCWWJFmUGE3vGxrmQXHaAJ-Sad4gSuAfMh4RZIOLqLNnM&usqp=CAU" alt="logo"> Tiếng Việt</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img uk-img width="30" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSv7cNW5WuVCeB7AqGuSnh4nckBqhN_1cRMsThbyFHSICtsyXg7Ds3E9YR2xQPGNm-KuQ&usqp=CAU" alt="Logo"> Tiếng Anh</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="header__link" href="#">
+                                    <img class="uk-border-circle" src="https://lh3.googleusercontent.com/ogw/ADea4I5HScjOTgEscCP3pDkiQweRUR7iSKk30eGIHPoo=s32-c-mo" alt="">
+                                    <span uk-icon="triangle-down"></span></a>
+                                <div class="uk-navbar-dropdown uk-margin-remove uk-padding-small">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li>
+                                            <a href="#"><i class="fas fa-user-tie"></i>Tài khoản</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-list"></i>Hoạt động</a></li>
+                                        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <!-- Menu dọc -->
+    <div class="menu uk-width-1-6">
+        <nav class="uk-nav uk-nav-default uk-padding-small uk-padding-remove-vertical">
+            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav="multiple: true">
+                <li>
+                    <div class="menu__logo">
+                        <img src="./assets/img/logo.jpg" alt="logo" uk-img>
+                    </div>
+                </li>
+                <hr class="uk-nav-divider">
+                <li><a href="#">Phần Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Main -->
+
+    <section class="main uk-width-5-6 uk-margin-auto-left uk-padding-small">
+        <!-- Main Content -->
+        <div class="main__content">
+            <div class="uk-overflow-auto uk-margin uk-card uk-card-default uk-border-rounded uk-padding-small">
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small uk-border-bottom uk-margin">
+                    <h4 class="uk-h3 uk-text-bold uk-text-capitalize uk-margin-remove">List</h4>
+                    <div class="uk-inline">
+                        <i class="fas fa-ellipsis-v"></i>
+                        <div uk-dropdown="pos: bottom-justify" style="min-width: 100px;" class="uk-padding-small">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li><a href="#">Add</a></li>
+                                <li><a href="#">Remove</a></li>
+                                <li><a href="#">View</a></li>
+                                <li><a href="#">Move</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <table class="uk-table uk-table-hover uk-table-middle uk-table-divider uk-table-striped uk-margin-remove">
+                    <thead>
+                        <tr>
+                            <th class="uk-table-shrink"><input class="uk-checkbox" type="checkbox"></th>
+                            <th class="uk-table-shrink">STT</th>
+                            <th class="uk-table-shrink">Mã Code</th>
+                            <th class="uk-sortable-handle">Mô tả</th>
+                            <th class="uk-table-small">Giá trị</th>
+                            <th class="uk-table-small">Trạng thái</th>
+                            <th class="uk-table-expand">Tác Vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="uk-checkbox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>Hành chính</td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. ficia incidunt minus nam, impedit!
+                            </td>
+                            <td>
+                                4.000.000 K
+                            </td>
+                            <td>
+                                <span class="uk-label uk-label-danger uk-text-capitalize">Danger</span>
+                            </td>
+                            <td>
+                                <div class="uk-flex">
+
+                                </div>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-info">Chi tiết</a>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-primary">Sửa</a>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-danger">Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="uk-checkbox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>Hành chính</td>
+                            <td>
+                                6.000
+                            </td>
+                            <td>
+                                4.000.000 K
+                            </td>
+                            <td>
+                                <span class="uk-label uk-text-capitalize">Default</span>
+                            </td>
+                            <td>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-info">
+                                    <i class="fas fa-info"></i>
+                                </a>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-primary">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="uk-button uk-button-small uk-border-rounded uk-text-capitalize uk-button-danger">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="uk-checkbox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>Hành chính</td>
+                            <td>
+                                6.000
+                            </td>
+                            <td>
+                                4.000.000 K
+                            </td>
+                            <td>
+                                <span class="uk-label uk-label-success uk-text-capitalize">Success</span>
+                            </td>
+                            <td>
+                                <a href="#" class="uk-link uk-margin-auto" type=><i class="fas fa-ellipsis"></i></a>
+                                <div uk-dropdown="mode: click">
+                                    <ul class="uk-nav uk-dropdown-nav">
+                                        <li><a href="#"><i class="fas fa-eye"></i>Xem thông tin</a></li>
+                                        <li><a href="#"><i class="fas fa-edit"></i>Sửa</a></li>
+                                        <li><a href="#"><i class="fas fa-trash"></i>Xóa</a></li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="#">Khác</a></li>
+                                    </ul>
+                                </div>
+                                <div class="uk-inline">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                    <div uk-dropdown="pos: bottom-justify" class="uk-padding-small">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li><a href="#"><i class="fas fa-eye"></i>Xem thông tin</a></li>
+                                            <li><a href="#"><i class="fas fa-edit"></i>Sửa</a></li>
+                                            <li><a href="#"><i class="fas fa-trash"></i>Xóa</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li><a href="#">Khác</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="uk-checkbox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>Hành chính</td>
+                            <td>
+                                6.000
+                            </td>
+                            <td>
+                                4.000.000 K
+                            </td>
+                            <td>
+                                <span class="uk-label uk-label-warning uk-text-capitalize">Warning</span>
+                            </td>
+                            <td>
+                                <a title="Chi Tiết" class="uk-button uk-button-primary uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-info-circle"></i></a>
+                                <a title="Sửa" class="uk-button uk-button-primary uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-edit"></i></a>
+                                <a title="Xóa" class="uk-button uk-button-danger uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="uk-overflow-auto uk-margin uk-card uk-card-default uk-border-rounded uk-padding-small">
+                <!-- Table -->
+                <div class="uk-card uk-card-default uk-padding-small">
+                    <table id="example" class="cell-border uk-table uk-table-hover uk-table-striped uk-table-responsive " style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên</th>
+                                <th>Loại</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Người cập nhật</th>
+                                <th>Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td>2011/04/25</td>
+                                <td>
+                                    <a title="Chi Tiết" class="uk-button uk-button-primary uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-info-circle"></i></a>
+                                    <a title="Sửa" class="uk-button uk-button-primary uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-edit"></i></a>
+                                    <a title="Xóa" class="uk-button uk-button-danger uk-button-small uk-border-circle uk-padding-x"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>63</td>
+                                <td>2011/07/25</td>
+                                <td class="uk-flex">
+                                    <a href="#" class="uk-link uk-margin-auto" type=><i class="fas fa-ellipsis-h"></i></a>
+                                    <div uk-dropdown="pos: bottom-justify" class="uk-padding-small">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li><a href="#"><i class="fas fa-eye"></i>Xem thông tin</a></li>
+                                            <li><a href="#"><i class="fas fa-edit"></i>Sửa</a></li>
+                                            <li><a href="#"><i class="fas fa-trash"></i>Xóa</a></li>
+                                            <li class="uk-nav-divider"></li>
+                                            <li><a href="#">Khác</a></li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.0/dist/js/uikit-icons.min.js "></script>
+
+</body>
+
+</html>
